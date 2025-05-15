@@ -1,0 +1,18 @@
+<div class="user-form">
+  <label>
+    First Name:
+    <input type="text" [(ngModel)]="userData.firstName" (ngModelChange)="updateField('firstName', $event)" />
+  </label>
+
+  <label>
+    Second Name:
+    <input type="text" [(ngModel)]="userData.secondName" (ngModelChange)="updateField('secondName', $event)" />
+  </label>
+
+  <label>
+    Display Name:
+    <input type="text" [(ngModel)]="userData.displayName" (ngModelChange)="updateField('displayName', $event)" (focus)="onDisplayNameFocus()" />
+  </label>
+
+  <pre>{{ userJson }}</pre>
+</div>
